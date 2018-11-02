@@ -1,0 +1,935 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Controls &amp; Automation &#8212; ProjeQtOr User guide 7.1.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '7.1.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="ProjeQtOr User guide 7.1.4 documentation" href="index.html" />
+    <link rel="next" title="Profiles" href="AccessRights.html" />
+    <link rel="prev" title="Emails sent" href="Tools.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="AccessRights.html" title="Profiles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Tools.html" title="Emails sent"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 7.1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="workflows">
+<span id="workflow"></span><span id="index-0"></span><h1>Workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Concepts</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Concept.html#profiles-definition"><span class="std std-ref">Profiles definition</span></a></li>
+</ul>
+</div>
+<p>A workflow defines the possibility to go from one status to another one, and who (depending on profile) can do this operation for each status.</p>
+<p>Once defined, a workflow can be linked to any type of any item.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the workflow.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the workflow.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define the order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that workflow is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Complete description of the workflow.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Button: Select status to show or hide</p>
+<ul class="simple">
+<li>This button <img alt="Button icon parameter" src="_images/iconParameter.png" />  can be used to hide some unnecessary status.</li>
+</ul>
+<div class="figure align-center">
+<img alt="Dialog box - Select status to show or hide" src="_images/BOX_SelectStatusToShowOrHide.png" />
+</div>
+<p class="rubric">Section: Workflow Diagram</p>
+<ul class="simple">
+<li>The workflow diagram presents a visual representation of the workflow displaying all possible transitions (independently to profile rights).</li>
+</ul>
+<div class="figure align-center" id="id6">
+<img alt="Workflow Diagram" src="_images/SEC_WorkflowDiagram.png" />
+<p class="caption"><span class="caption-text">Workflow Diagram</span></p>
+</div>
+<p class="rubric">Section: Habilitation to change from a status to another</p>
+<ul class="simple">
+<li>The habilitation table helps defining who can move from one status to another one.</li>
+<li>Each line corresponds to the status from which you want to be able to move.</li>
+<li>Each column corresponds to the status to which you want to be able to go.</li>
+<li>It is not possible to go from one status to itself (these cells are blank).</li>
+<li>Just check the profile (or “all”) who is allowed to pass from one status to the other.</li>
+</ul>
+<div class="figure align-center">
+<img alt="Habilitation table" src="_images/SEC_HabilitationTable.png" />
+</div>
+<div class="compound">
+<p class="compound-first"><strong>In the upper example:</strong></p>
+<ul class="compound-last simple">
+<li>Anyone can move an item from “recorded” to “assigned” and from “recorded” to “cancelled”.</li>
+<li>No one can move an item from “qualified” status to any other status. In this case, pay attention that it must never be possible to move an item to “qualified” status, because it will not be possible to leave this status.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="email-templates">
+<span id="email-template"></span><span id="index-1"></span><h1>Email Templates<a class="headerlink" href="#email-templates" title="Permalink to this headline">¶</a></h1>
+<p>The user is able to format mails that are sent automaticaly on events (see Mails on event).
+When using template, the standard email formating is replaced with selected one.
+Just define your templates, and select it on the &#8220;Mail on Events&#8221;</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><cite>Id</cite></th>
+<th class="head">Unique Id for the template.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>email template name</td>
+</tr>
+<tr class="row-odd"><td>Element updated</td>
+<td>elements that will be able to use this template</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type of the selected element that will be able to use this template</td>
+</tr>
+<tr class="row-odd"><td>title</td>
+<td>title of sent mails</td>
+</tr>
+<tr class="row-even"><td>template</td>
+<td>template of sent mails</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that email template is archived.</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">Field: element updated and type</p>
+<ul class="simple">
+<li>If not set, the template is valid for every type of the element</li>
+<li>If element is set, only these elements will be able to select the template</li>
+<li>if element and type are set, only these elements of the correspondiong type will be able to select the template</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>in the template, user can use any property of the updated object to show in the mail, just use ${propertyName}
+for instance ${name} will display the name of the item, ${id} will display its id</li>
+<li>for properties referencing external item, such as idXxxxx, use ${nameXxxxx} to display name of item instead of its id
+for instance ${nameProject} will display the name of the project, as ${idProject} will display the id of the project</li>
+<li>other tags are available as parameters for email titles (see Global Parameters &gt; emails)</li>
+<li>some specific tags can also be used<ul>
+<li>${item} : class of the item</li>
+<li>${dbName} : display name of current instance</li>
+<li>${responsible} : synonym for ${nameResource}</li>
+<li>${sender} : name of user sending the email</li>
+<li>${project} : synonym for ${nameProject}</li>
+<li>${url} : url to get the direct link to the item</li>
+<li>${goto} : display Class and Id of item, clickable to have direct link to the item</li>
+</ul>
+</li>
+<li>3 other tags are available except in the mail title because they display a table.<ul>
+<li>${HISTORY} : displays the last changes of an object.</li>
+<li>${LINK} : list linked elements to the item</li>
+<li>${NOTE} : lists the notes of the item</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="mails-on-event">
+<span id="mail-on-event"></span><span id="index-2"></span><h1>Mails on event<a class="headerlink" href="#mails-on-event" title="Permalink to this headline">¶</a></h1>
+<p>The application is able to automatically send mails on updating event.</p>
+<p>Events are defined on an element and element type.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The mail message is formatted to display item information.</li>
+<li>Mail titles is defined in <span class="xref std std-ref">Global parameters</span> screen.</li>
+<li>Selecting a Template will use the formating of the template instead of default standard formating.</li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the event.</td>
+</tr>
+<tr class="row-odd"><td>Element updated</td>
+<td>Type of elements that will be concerned by automatic emailing.</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type of the selected element updated.</td>
+</tr>
+<tr class="row-odd"><td>New status</td>
+<td>Positioning the elements to this status will generate an email.</td>
+</tr>
+<tr class="row-even"><td>Or other event</td>
+<td>Other event that will possibly generate an email.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that status mail is archived.</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">Field: Type</p>
+<ul class="simple">
+<li>If not set, the event is valid for every type of the element.</li>
+</ul>
+</div>
+<p class="rubric">Section: Mail receivers</p>
+<ul class="simple">
+<li>List of addresses of the mails.</li>
+<li>The list is not nominative, but defined as roles on the element.</li>
+<li>Each addressee will receive mail only once, even if a person has several “checked” roles on the element.</li>
+<li>See: <a class="reference internal" href="#receivers-list"><span class="std std-ref">Receivers list</span></a> for receivers detail.</li>
+</ul>
+</div>
+<div class="section" id="delays-for-tickets">
+<span id="delay-for-ticket"></span><span id="index-3"></span><h1>Delays for tickets<a class="headerlink" href="#delays-for-tickets" title="Permalink to this headline">¶</a></h1>
+<p>It is possible to define a default delay for tickets, for each ticket type and each ticket urgency.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>On creation, the due date will automatically be calculated as creation date + delay.</li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the delay definition.</td>
+</tr>
+<tr class="row-odd"><td><strong>Ticket type</strong></td>
+<td>Ticket type the delay applies to.</td>
+</tr>
+<tr class="row-even"><td><strong>Urgency</strong></td>
+<td>Urgency of ticket the delay applied to.</td>
+</tr>
+<tr class="row-odd"><td><strong>Value</strong></td>
+<td>Value of delay.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that delay definition is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Value</p>
+<ul class="simple">
+<li>Unit for the value can be :<ul>
+<li>Days : simple calculation as days.</li>
+<li>Hours : simple calculation as hours.</li>
+<li>Open days : calculation excluding days off (weekends and days off defined on “calendar”).</li>
+<li>Open hours : calculation only on the “standard open hours” defined in <a class="reference internal" href="Administration.html#daily-work-hours-section"><span class="std std-ref">Global parameters</span></a> screen.</li>
+</ul>
+</li>
+</ul>
+</div>
+<span class="target" id="index-4"></span><span class="target" id="index-5"></span></div>
+<div class="section" id="indicators">
+<span id="indicator"></span><span id="index-6"></span><h1>Indicators<a class="headerlink" href="#indicators" title="Permalink to this headline">¶</a></h1>
+<p>It is possible to define indicators on each type of element.</p>
+<p>Depending on type of elements the type of indicators that can be selected in list differs.</p>
+<p>Some indicators are based on delay (due date), some on work, some on cost.</p>
+<p>For each indicator a warning value and an alert value can be defined.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the indicator definition.</td>
+</tr>
+<tr class="row-odd"><td>Element</td>
+<td>The elements the indicator applies to.</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type of the elements the indicator applies to.</td>
+</tr>
+<tr class="row-odd"><td>Indicator</td>
+<td>Indicator applies to.</td>
+</tr>
+<tr class="row-even"><td>Reminder</td>
+<td>Delay before due date or % of work or % or cost to send a warning.</td>
+</tr>
+<tr class="row-odd"><td>Alert</td>
+<td>Delay before due date or % of work or % or cost to send an alert.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that delay definition is archived.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Section: Mail receivers</p>
+<ul class="simple">
+<li>List of addresses of the mails.</li>
+<li>The list is not nominative, but defined as roles on the element.</li>
+<li>Each addressee will receive mail only once, even if a person has several “checked” roles on the element.</li>
+<li>See : <a class="reference internal" href="#receivers-list"><span class="std std-ref">Receivers list</span></a> for receivers detail.</li>
+</ul>
+<p class="rubric">Section: Internal alert receivers</p>
+<ul class="simple">
+<li>List of addresses of the internal alert.</li>
+<li>The list is not nominative, but defined as roles on the element.</li>
+<li>See : <a class="reference internal" href="#receivers-list"><span class="std std-ref">Receivers list</span></a> for receivers detail.</li>
+</ul>
+<span class="target" id="index-7"></span></div>
+<div class="section" id="predefined-notes">
+<span id="index-8"></span><span id="id1"></span><h1>Predefined notes<a class="headerlink" href="#predefined-notes" title="Permalink to this headline">¶</a></h1>
+<p>The predefined note set the possibility to define some predefined texts for notes.</p>
+<p>When some predefined notes are defined for an element and / or type a list will appear on note creation.</p>
+<p>Selecting an item in the list will automatically fill in the note text field.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the predefined note.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the predefined note.</td>
+</tr>
+<tr class="row-even"><td>Element</td>
+<td>Kind of item (Ticket, Activity, …) for which this predefined note will be proposed on note creation.</td>
+</tr>
+<tr class="row-odd"><td>Type</td>
+<td>Type of element for which this predefined note will be proposed on note creation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that delay definition is archived.</td>
+</tr>
+<tr class="row-odd"><td>Text</td>
+<td>Predefined text for notes.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Element</p>
+<ul class="simple">
+<li>If not set, predefined note is valid for every element type.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Type</p>
+<ul class="simple">
+<li>If not set, predefined note is valid for every type of the element.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="checklists">
+<span id="checklist-definition"></span><span id="index-9"></span><h1>Checklists<a class="headerlink" href="#checklists" title="Permalink to this headline">¶</a></h1>
+<p>It is possible to define checklist forms for each type of element.</p>
+<p>When a checklist form exists for a given element, the checklist is available for the element.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the checklist definition.</td>
+</tr>
+<tr class="row-odd"><td>Element</td>
+<td>The elements the checklist applies to.</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type of the elements the checklist applies to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that checklist definition is archived.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Section: Checklist lines</p>
+<p>A checklist is built from checklist lines.</p>
+<ul class="simple">
+<li>Click on <img alt="Button add" src="_images/smallButtonAdd.png" />  to create a new checklist line.</li>
+<li>Click on <img alt="Button edit" src="_images/smallButtonEdit.png" /> to update an existing checklist line.</li>
+<li>Click on <img alt="Button icon delete" src="_images/buttonIconDelete.png" /> to delete the corresponding checklist line.</li>
+</ul>
+<div class="figure align-center">
+<img alt="Dialog box - Choices for the checklist lines" src="_images/BOX_ChoicesForChecklistLines.png" />
+</div>
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">Fields - Choices for the checklist lines</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Name</td>
+<td>Name of the subject of the checklist line.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Order of the line in the list.</td>
+</tr>
+<tr class="row-even"><td>Choice #n</td>
+<td>Possible choices (checks) for the list (up to 5 choices).</td>
+</tr>
+<tr class="row-odd"><td>Exclusive</td>
+<td>Are the choices exclusive (select one will unselect others).</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">Details of dialog box</p>
+<ul class="simple">
+<li>Each line has a name, an order and up to 5 check choices.</li>
+<li>A line with no check choice will be displayed as a <strong>section title</strong>.</li>
+<li>Name and Choices have 2 fields :<ol class="arabic">
+<li>Displayed caption.</li>
+<li>Help text that will be displayed as tooltip.</li>
+</ol>
+</li>
+<li>Checks can be exclusive (select one will unselect others) or not (multi selection is then possible).</li>
+</ul>
+</div>
+<span class="target" id="index-10"></span></div>
+<div class="section" id="receivers-list">
+<span id="index-11"></span><span id="id2"></span><h1>Receivers list<a class="headerlink" href="#receivers-list" title="Permalink to this headline">¶</a></h1>
+<p>Receivers can receive email and alert.</p>
+<p>A description of receivers below.</p>
+<p class="rubric">Requestor</p>
+<ul class="simple">
+<li>The contact defined as <a class="reference internal" href="Concept.html#term-requestor"><span class="xref std std-term">requestor</span></a> on current item; sometimes appears as “contact” (on quotation and order, for instance) and sometimes have no meaning (for instance for milestone).</li>
+</ul>
+<p class="rubric">Issuer</p>
+<ul class="simple">
+<li>The user defined as <a class="reference internal" href="Concept.html#term-issuer"><span class="xref std std-term">Issuer</span></a>.</li>
+</ul>
+<p class="rubric">Responsible</p>
+<ul class="simple">
+<li>The resource defined as <a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">responsible</span></a>.</li>
+</ul>
+<p class="rubric">Project team</p>
+<ul class="simple">
+<li>All resources allocated to the project.</li>
+</ul>
+<p class="rubric">Project leader</p>
+<ul class="simple">
+<li>The resource(s) allocated to the project with a “Project Leader” profile.</li>
+</ul>
+<p class="rubric">Project manager</p>
+<ul class="simple">
+<li>The resource defined as the manager on a project.</li>
+</ul>
+<p class="rubric">Assigned resource</p>
+<ul class="simple">
+<li>All resources assigned.</li>
+</ul>
+<p class="rubric">Other</p>
+<ul class="simple">
+<li>Provides an extra field to manually enter email addresses.</li>
+<li>If “other” is checked, an input box is displayed to enter a static mail address list.</li>
+<li>Several addresses can be entered, separated by semicolon.</li>
+</ul>
+</div>
+<div class="section" id="kpi-definitions">
+<span id="index-12"></span><span id="id3"></span><h1>KPI definitions<a class="headerlink" href="#kpi-definitions" title="Permalink to this headline">¶</a></h1>
+<p>A performance indicator or key performance indicator (KPI) is a type of performance measurement.</p>
+<p>It is possible to define Kpi on incomings and deliverables items.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the KPI.</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>Name of the KPI.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>code of the KPI.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Complete description of the KPI.</td>
+</tr>
+<tr class="row-even"><td>Idle</td>
+<td>Statut of the KPI.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<ul class="last simple">
+<li>Description integrates the formula used to calculate the KPI.</li>
+</ul>
+</div>
+<p class="rubric">Section: Tresholds</p>
+<p>It is possible to attributes tresholds lines to KPI.</p>
+<ul class="simple">
+<li>Click on <img alt="Button add" src="_images/smallButtonAdd.png" />  to create a new JobList line.</li>
+<li>Click on <img alt="Button edit" src="_images/smallButtonEdit.png" /> to update an existing JobList line.</li>
+<li>Click on <img alt="Button icon delete" src="_images/buttonIconDelete.png" /> to delete the corresponding JobList line.</li>
+</ul>
+<div class="figure">
+<img alt="_images/Kpi_Tresholds.PNG" src="_images/Kpi_Tresholds.PNG" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Keep in mind KPI is an indicator of performance at project level (opposite to indicator which is calculated at item level).</li>
+<li>to display the indicator, use Kpi report. See: <a class="reference internal" href="Report.html#report"><span class="std std-ref">Reports</span></a></li>
+</ul>
+</div>
+<div class="figure">
+<img alt="_images/Kpi_report.png" src="_images/Kpi_report.png" />
+</div>
+</div>
+<div class="section" id="joblist">
+<span id="index-13"></span><span id="id4"></span><h1>JobList<a class="headerlink" href="#joblist" title="Permalink to this headline">¶</a></h1>
+<p>Management of the JobList can be used for each element but it usually used to detail an Activity or Ticket.</p>
+<p>When a Joblist form exists for a given element, the Joblist is available for the element</p>
+<p>It is an indicator to follow the respect of dates values.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the KPI..</td>
+</tr>
+<tr class="row-odd"><td>IdChecklistable</td>
+<td>Unique Id for the Checklistable.</td>
+</tr>
+<tr class="row-even"><td>idType</td>
+<td>Type of the elements the joblist applies to.</td>
+</tr>
+<tr class="row-odd"><td>Idle</td>
+<td>idle.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Section: JobList lines</p>
+<p>A JobList is built from JobList lines.</p>
+<ul class="simple">
+<li>Click on <img alt="Button add" src="_images/smallButtonAdd.png" />  to create a new JobList line.</li>
+<li>Click on <img alt="Button edit" src="_images/smallButtonEdit.png" /> to update an existing JobList line.</li>
+<li>Click on <img alt="Button icon delete" src="_images/buttonIconDelete.png" /> to delete the corresponding JobList line.</li>
+</ul>
+<div class="figure">
+<img alt="_images/Joblist.png" src="_images/Joblist.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Looking like CheckLists with no choice.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="notification-system">
+<span id="index-14"></span><span id="id5"></span><h1>Notification system<a class="headerlink" href="#notification-system" title="Permalink to this headline">¶</a></h1>
+<p>This system also allows you to generate notifications manually or according to some very &#8220;powerful&#8221; rules (defined as &#8220;where&#8221; clauses).
+We now have 2 systems for generating alerts or reminders :  indicators and notifications.</p>
+<p>The concept of user notification has been incorporated into projeqtor. A notification has a title, a content, a remitter. If it is generated by the notification system (see following paragraph), it is linked to an element of the system (Action, Invoice,…).</p>
+<p>In order to automatically generate notifications based on certain field values of a system element, a notification system has been implemented.
+This notification system, whose purpose is to automatically generate notifications, is based on notification generation definitions.</p>
+<ol class="upperalpha simple">
+<li>Creation _________________</li>
+</ol>
+<p>The definition of notification generation is based on the following:</p>
+<ul class="simple">
+<li>The element of the system that determines the notification, called &#8220;Notifiable Element&#8221; (notifiable)</li>
+<li>The notification rule notifying the elements related to the generation of a notification</li>
+<li>The date (referred to as the reference date) at which the notification must be generated. This is one of the dates of the notifiable item that is not the creation date.</li>
+<li>The generated notification receivers. Fields of the notifiable element or its sub-elements that refer to users.</li>
+<li>The type of notification (Alert, Warning, Information)</li>
+<li>The title that can contain the field values of the notifiable element or its sub-elements</li>
+<li>The content may also contain the field values of the notifiable element or its sub-elements.</li>
+<li>The choice to send, or not, to all the sending of emails at the same time as the notifications.</li>
+</ul>
+<p><strong>* Definition of notifications</strong></p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span class="xref std std-term">Name</span></td>
+<td>appears on level 3 of the unread notification tree.</td>
+</tr>
+<tr class="row-odd"><td>Notif. item</td>
+<td>Type of the element the list applies to .</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type represents level 1 of the unread notification tree.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Section: Notification title</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span class="xref std std-term">Title</span></td>
+<td>Can add dynamics fields.</td>
+</tr>
+</tbody>
+</table>
+<p>This is the screen used to define the &#8220;programmed&#8221; parameters of the programming generation.</p>
+<ul class="simple">
+<li>Section &#8216;Description&#8217;:</li>
+</ul>
+<p>◦ Closed: As everywhere in projeQtor.</p>
+<ul class="simple">
+<li>Section &#8220;Title of the notification&#8221;</li>
+</ul>
+<p>◦ Title: The title of the notification (the subject of the email is the option &#8216;Send email&#8217; is selected).
+It can contain fields of the &#8220;notifiable&#8221; element and its linked elements through an idXXX (where XXX represents the name of the linked element). In this case, the syntax must be: # {the field name}.
+Example: # {billId} - Invoice not paid - Sent on # {sendDate}
+If the rule (see below) of the instruction on the invoice of &#8216;billId&#8217; 2017-10-30-0001 whose sending date is 30-10-2017 then the title of the notification SERA:
+2017-10-30-0001 - Invoice not paid - Submitted on 10-30-2017</p>
+<p>The following elements allow you to integrate dynamic fields:
+The comboBox &#8216;Element&#8217; allows you to choose the selected notifiable element or one of its key linked elements.
+The comboxBox &#8216;Field&#8217; allows you to choose the dynamic field of the element selected in &#8216;Element&#8217;.
+The &#8216;Insert&#8217; button allows you to insert where the cursor is in the title the dynamic field with the right synthax.</p>
+<p>◦ Content: This is the content of the notification (to the email, if the &#8216;Send Email&#8217; option is selected).
+In the same way as for the title, it can contain fields of the &#8220;notifiable&#8221; element and its elements leas by an idXXXX.</p>
+<ul class="simple">
+<li>Rule to apply:</li>
+</ul>
+<div class="figure">
+<img alt="_images/screenshot156.png" src="_images/screenshot156.png" />
+</div>
+<p>This rule determines which instance of the item will generate a notification.
+The syntax is the one we take for a WHERE clause in an SQL statement.
+Example: Declares a notification for all invoices whose amount has been paid &lt;total amount AND whose project name is &#8216;ACME&#8217;
+# {paymentAmount} &lt;# {fullAmount}
+AND
+# {idProject.name} = &#8216;ACME&#8217;
+AND
+isnull (# {paymentDate)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The rule to apply is not mandatory. If the rule is empty, then only the reference date is used to determine whether or not a notification is generated.
+In addition to choosing a dynamic field, you can choose to use an operator or function with the following elements:</p>
+</div>
+<div class="figure">
+<img alt="_images/screenshot155.png" src="_images/screenshot155.png" />
+</div>
+<ul>
+<li><p class="first">Notification content : Mandatory</p>
+</li>
+<li><p class="first">Start as:</p>
+</li>
+<li><div class="first line-block">
+<div class="line">Reference Date : This is the notification date of the creation of the notification.</div>
+<div class="line">Example: &#8216;Due date&#8217; (paymentDueDate) is selected. For all invoices that are not the previous rule, a notification will be generated if the due date is greater than or equal to the current date.</div>
+</div>
+</li>
+<li><p class="first">Month: If checked, the generator (notification) applies to the year from the reference date to the reference day.</p>
+</li>
+<li><p class="first">Fixed Day: If a day is chosen (not empty), the generator (if the rule applies).</p>
+</li>
+<li><p class="first">Year: If the year is checked, the generator is a notification every year to the month and the day of the reference date</p>
+</li>
+<li><p class="first">Fixed month: If a month is chosen, the generator (a rule) a notification each year to the fixed month and the day of the reference date</p>
+</li>
+<li><p class="first">Fixed day: If a day is chosen, the data generator (not apply) is notified each year to the year of the reference date on the day fixed.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If Year Checked, month and day corrects, then it is a birthday. The statement generator a notification every year to come in the month and on the set day. The reference date is no longer used for anything in this case.</li>
+</ul>
+</div>
+<ul>
+<li><p class="first">Notify before: This is a number of days before the notification date for which the notification is to be generated</p>
+</li>
+<li><div class="first line-block">
+<div class="line">Send to: These are the types of people who are notified.</div>
+<div class="line">The syntax is as follows: One of the words in the &#8220;Help - Authorized Recipients&#8221; section separated by a &#8216;;</div>
+<div class="line">The following items allow you to choose the type of remitter.</div>
+</div>
+</li>
+</ul>
+<div class="figure">
+<img alt="_images/screenshot157.png" src="_images/screenshot157.png" />
+</div>
+<ul class="simple">
+<li>Sent e-mail: If checked, an e-mail will be generated even if the notification for each type of person has been defined.</li>
+</ul>
+<blockquote>
+<div><ol class="upperalpha simple" start="2">
+<li>Miscellaneous ____________________</li>
+</ol>
+</div></blockquote>
+<ul class="simple">
+<li>The parameterization</li>
+</ul>
+<p>There are 2 global settings for the notification system:</p>
+<blockquote>
+<div><ul>
+<li><div class="first line-block">
+<div class="line">notificationSystemActiv</div>
+<div class="line">If YES, the notification system is implemented.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">CronCheckNotifications</div>
+<div class="line">Gives in seconds, the time interval between two generations of notification (and the Cron system is active) and between two the refresh of notifications on the HMI.</div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p>Generation of notifications</p>
+<p>Made by the CRON every hour
+Made at each change (creation, modification, deletion) of rule definition
+Not done on changes of other classes</p>
+<ul class="simple">
+<li>The authorizations</li>
+</ul>
+<p>The access rights for the &#8216;Notification&#8217; menu were given to the &#8216;standard&#8217; projeqtor profiles (idProfile = 1 to 7).
+The access rights for the &#8216;Notification Definition&#8217; menu have been given for the administrator profile (idProfile = 1).</p>
+<ul class="simple">
+<li>Access Rights</li>
+</ul>
+<p>For notifications, rights:</p>
+<ul class="simple">
+<li>&#8216;full&#8217; were given to the administrator profile.</li>
+<li>&#8216;modifiers&#8217;</li>
+</ul>
+<p>For the definition of the notification rules (notificationDefinition), the rights:</p>
+<p>&#8220;update&#8221; was given to the administrator profile.</p>
+<p>&#8216;read only&#8217; for other profiles</p>
+<blockquote>
+<div><ol class="upperalpha simple" start="3">
+<li>The IHMs ____________________</li>
+</ol>
+</div></blockquote>
+<p>After logging in, a message generated after &#8220;Login accepted&#8221; that tells you that you have unread notifications:</p>
+<div class="figure">
+<img alt="_images/himnotification1.png" src="_images/himnotification1.png" />
+</div>
+<div class="figure">
+<img alt="_images/himnotification2.png" src="_images/himnotification2.png" />
+</div>
+<p>Display of unread notifications
+It is done at 2 levels on the main screen:</p>
+<p>Bottom right
+A notification icon appears as soon as a notification is not intended for the user.</p>
+<p>Clicking on the icon gives direct access to the notifications screen.</p>
+<ul class="simple">
+<li>Below the menus</li>
+</ul>
+<div class="figure">
+<img alt="_images/himnotification3.png" src="_images/himnotification3.png" />
+</div>
+<p>A tree whose title indicates the number of unread notifications intended for the user.</p>
+<p>This tree has the following levels:</p>
+<ul class="simple">
+<li>Level 1: The types of notifications</li>
+<li>Level 2: The trigger for notifications</li>
+<li>Level 3: The Notification Definition to Product Notifications</li>
+<li>Level 4: The id of the element that generated the notification. The icon allows direct access to the item.</li>
+</ul>
+<p>The icon allows you to refresh notifications without waiting for the scheduled update.
+The icon provides direct access to the notifications screen.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Workflows</a></li>
+<li><a class="reference internal" href="#email-templates">Email Templates</a></li>
+<li><a class="reference internal" href="#mails-on-event">Mails on event</a></li>
+<li><a class="reference internal" href="#delays-for-tickets">Delays for tickets</a></li>
+<li><a class="reference internal" href="#indicators">Indicators</a></li>
+<li><a class="reference internal" href="#predefined-notes">Predefined notes</a></li>
+<li><a class="reference internal" href="#checklists">Checklists</a></li>
+<li><a class="reference internal" href="#receivers-list">Receivers list</a></li>
+<li><a class="reference internal" href="#kpi-definitions">KPI definitions</a></li>
+<li><a class="reference internal" href="#joblist">JobList</a></li>
+<li><a class="reference internal" href="#notification-system">Notification system</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Tools.html"
+                        title="previous chapter">Emails sent</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="AccessRights.html"
+                        title="next chapter">Profiles</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="AccessRights.html" title="Profiles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Tools.html" title="Emails sent"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 7.1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2018, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

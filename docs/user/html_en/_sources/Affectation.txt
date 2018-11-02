@@ -1,0 +1,69 @@
+.. raw:: latex
+
+    \newpage
+
+.. title:: Allocations
+
+.. index:: ! Allocation
+
+.. _allocation:
+
+Allocations
+------------
+
+
+.. sidebar:: Concepts 
+
+   * :ref:`profiles-definition`
+   * :ref:`user-ress-contact-demystify`
+   * :ref:`allocation-to-project`
+
+
+Allows to manage allocations to project.
+
+Offers a global view of allocation.
+
+.. hint::
+ 
+   * You can use filters. 
+
+.. rubric:: Section: Description
+
+
+.. tabularcolumns:: |l|l|
+
+.. list-table::
+   :widths: 20, 80
+   :header-rows: 1
+
+   * - Field
+     - Description
+   * - :term:`Id`
+     - Unique Id for the allocation.
+   * - Resource
+     - Name of the allocated resource.
+   * - Or contact
+     - Name of the allocated contact.
+   * - **Profile**
+     - Selected profile.
+   * - **Project**
+     - Project allocated to.
+   * - Rate
+     - Allocation rate for the project (%).
+   * - Start date
+     - Start date of allocation.
+   * - End date
+     - End date of allocation.
+   * - :term:`Closed`
+     - Flag to indicate that the allocation is archived.
+   * - :term:`Description`
+     - Complete description of the allocation.
+
+**\* Required field**
+
+.. topic:: Fields: Resource & Contact
+
+   * You can select resource or contact.
+   * If none is selected then the user connected is used to define the allocation.
+   * If a contact is a resource and inversely, then resource or contact name will be selected too.
+

@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Administration &#8212; ProjeQtOr User guide 7.1.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '7.1.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="ProjeQtOr User guide 7.1.4 documentation" href="index.html" />
+    <link rel="next" title="Activity Stream" href="ActivityStream.html" />
+    <link rel="prev" title="Organizations" href="Organization.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ActivityStream.html" title="Activity Stream"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Organization.html" title="Organizations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 7.1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The screens described below are restricted to users with administrator profile.</li>
+<li>Users with others profiles can have access whether access rights is granted.</li>
+</ul>
+</div>
+<div class="section" id="administration-console">
+<span id="admin-console"></span><span id="index-0"></span><h1>Administration console<a class="headerlink" href="#administration-console" title="Permalink to this headline">¶</a></h1>
+<p>Administration console allows to execute administration tasks on application.</p>
+<span class="target" id="index-1"></span><span class="target" id="index-2"></span><p class="rubric" id="index-3">Section: Background tasks</p>
+<ul class="simple">
+<li>Allows to start and stop background task is a specific threaded treatment that regularly checks for indicators to generate corresponding alerts, warnings and automatic import when needed.</li>
+</ul>
+<p class="rubric" id="index-4">Section: Send an internal alert</p>
+<ul class="simple">
+<li>Allows to send an internal alert to users.</li>
+</ul>
+<p class="rubric" id="index-5">Section: Manage connections</p>
+<ul class="simple">
+<li>Allows to force disconnection of active users and close the application for new connections.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Button: Disconnect all users</strong></p>
+<ul class="compound-middle simple">
+<li>Allows to disconnect all connected users except your own connection.</li>
+<li>The application status is displayed below.</li>
+</ul>
+<div class="compound-last admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Disconnection will be effective for each user when his browser will ckeck for alerts to be displayed.</li>
+<li>The delay for the effective disconnection of users will depend on the parameter “delay (in second) to check alerts” in <a class="reference internal" href="#automated-service"><span class="std std-ref">Global parameters</span></a> screen.</li>
+</ul>
+</div>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Button: Open/Close application</strong></p>
+<ul class="compound-last simple">
+<li>Allows to open and close application.</li>
+<li>When the application is closed the message below will appear on login screen.</li>
+</ul>
+</div>
+</div></blockquote>
+<span class="target" id="index-6"></span><span class="target" id="index-7"></span><p class="rubric" id="index-8">Section: Maintenance of Data</p>
+<ul class="simple">
+<li>The administrator has the possibility to:<ul>
+<li>Close and delete sent emails and alerts.</li>
+<li>Delete history of connections.</li>
+<li>Updating references for any kind of element.</li>
+</ul>
+</li>
+</ul>
+<p class="rubric" id="index-9">Section: Log files maintenance</p>
+<ul class="simple">
+<li>The administrator has the possibility to:<ul>
+<li>Delete old log files.</li>
+<li>Show the list and specific log file.</li>
+</ul>
+</li>
+</ul>
+<span class="target" id="index-10"></span></div>
+<div class="section" id="audit-connections">
+<span id="index-11"></span><span id="id1"></span><h1>Audit connections<a class="headerlink" href="#audit-connections" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Audit connection proposes a view of “who is online”.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The administrator has the possibility to force the disconnection of any user (except his own current connection), see: <a class="reference internal" href="#admin-console"><span class="std std-ref">Administration console</span></a>.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="global-parameters">
+<span id="index-12"></span><span id="id2"></span><h1>Global parameters<a class="headerlink" href="#global-parameters" title="Permalink to this headline">¶</a></h1>
+<p>Global parameters screen allows configuration of application settings.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Tooltip</p>
+<ul class="last simple">
+<li>Moving the mouse over the caption of a parameter will display a tooltip with more description about the parameter.</li>
+</ul>
+</div>
+<p class="rubric">GENERAL SECTION 1: Work time</p>
+<p class="rubric" id="daily-work-hours-section">Section: Daily work hours</p>
+<ul class="simple">
+<li>Definition of regular “work hours”.</li>
+<li>Used to calculate delays based on “open hours”.</li>
+</ul>
+<p class="rubric">Section: Open days</p>
+<ul>
+<li><p class="first">Possibility to define the working days in the company.</p>
+<ul class="simple">
+<li>For each day of the week, you can choose between open days or off days.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>This parameter are taken into account in : working days on calendars, the working days on the calculation and the display ,the working days on the display of real work allocation.</li>
+</ul>
+</div>
+</li>
+</ul>
+<span class="target" id="index-13"></span><p class="rubric" id="unitforwork-section"><span id="index-14"></span>Section: Units for work</p>
+<ul class="simple">
+<li>The parameters to real work allocation and workload.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Fields: Unit for real work allocation and for all work data</strong></p>
+<ul class="compound-middle simple">
+<li>Definition of the unit can be in days or hours.</li>
+</ul>
+<div class="compound-last admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If both values are different, rounding errors may occur.</li>
+<li>Remember that data is always stored in days.</li>
+<li>Duration will always be displayed in days, whatever the workload unit.</li>
+</ul>
+</div>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Number of hours per day</strong></p>
+<ul class="compound-last simple">
+<li>Allows to set number of hours per day.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric" id="realworkallocation-section">Section: Real work allocation</p>
+<ul class="simple">
+<li>Defines behavior of tasks in the real work allocation screen.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Display only handled tasks</strong></p>
+<ul class="compound-last simple">
+<li>Display only tasks with &#8220;handled&#8221; status.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Set to first &#8216;handled&#8217; status</strong></p>
+<ul class="compound-last simple">
+<li>Change status of the task to the first &#8220;handled&#8221; status when  real work is entered.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Set to first &#8216;done&#8217; status</strong></p>
+<ul class="compound-last simple">
+<li>Change status of the task to the first &#8220;done&#8221; status when no left work remains.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Max days to book work (warning) :</strong></p>
+<ul class="compound-middle simple">
+<li>Number of days that user can enter real work in the future before getting a warning.</li>
+</ul>
+<div class="compound-last admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>this parameter does not apply to administrative projects</li>
+</ul>
+</div>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Max days to book work (blocking)</strong></p>
+<blockquote class="compound-middle">
+<div><ul class="simple">
+<li>Number of days that user can enter real work in the future. This limit is blocking.</li>
+</ul>
+</div></blockquote>
+<div class="compound-last admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>this parameter does not apply to administrative projects</li>
+</ul>
+</div>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Alert resource on input done by someone else</strong></p>
+<ul class="compound-last simple">
+<li>Select your type of alert : Internal, Email, both or none.</li>
+</ul>
+</div>
+<div class="compound">
+<p><strong>Display pools on timesheet</strong>
+* Possibly to display the pool whose the resource belongs to.</p>
+</div>
+</div></blockquote>
+<p class="rubric">GENERAL SECTION 2 : Activity</p>
+<p class="rubric">Section: Planning</p>
+<ul class="simple">
+<li>Specific parameters about Gantt planning presentation.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Show resource in Gantt</strong></p>
+<ul class="compound-last simple">
+<li>Select if the resource can be displayed in a Gantt chart, and format for display (name or initials or none).</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Max projects to display</strong></p>
+<blockquote class="compound-middle">
+<div><ul class="simple">
+<li>Defines maximum number of projects to display.</li>
+<li>To avoid performance issues.</li>
+</ul>
+</div></blockquote>
+<div class="compound-last compound">
+<p class="compound-first"><strong>Apply strict mode for dependencies</strong>
+Defines if a task can begin the same day as the preceding one.</p>
+<ul class="compound-last simple">
+<li>If yes, the successor should begin the next day</li>
+<li>If no, the successor can start the same day.</li>
+</ul>
+</div>
+</div>
+</div></blockquote>
+<p>Behavior about management of responsible, including automatic initialization of responsible.</p>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li>Automatically set Responsible if not set and by the only one resource allocated to the project</li>
+</ul>
+</div></blockquote>
+<div class="compound">
+<p>** Auto allocated the Manager to the project**</p>
+</div>
+<ul class="simple">
+<li>Automatically create an allocation for the project Manager to the project. He should be a resource.</li>
+</ul>
+<div class="compound">
+<p>** Auto set a Responsible if needed**</p>
+</div>
+<ul class="simple">
+<li>Automatically set Responsible to current resource (as using the element) if not set and if a Responsible is required (respecting access rights)</li>
+</ul>
+<div class="compound">
+<p>** Auto assign Responsible to activity**</p>
+</div>
+<ul class="simple">
+<li>Assign automatically the Responsible to activities</li>
+</ul>
+<div class="compound">
+<p>** Update milestone from deliverable** (Have to link elements)</p>
+</div>
+<ul class="simple">
+<li>Update milestone Responsible automatically when the Responsible of deliverable has changed.</li>
+</ul>
+<div class="compound">
+<p>** Update milestone from incoming** (Have to link elements)</p>
+</div>
+<ul class="simple">
+<li>Update milestone Responsible automatically when the Responsible of deliverable has changed.</li>
+</ul>
+<div class="compound">
+<p>** Update deliverable from milestone**(have to link elements)</p>
+</div>
+<ul class="simple">
+<li>Update deliverable Responsible automatically when the Responsible of mielstone has changed.</li>
+</ul>
+<div class="compound">
+<p>** Update incoming from milestone**(have to link elements)</p>
+</div>
+<ul class="simple">
+<li>Update incoming Responsible automatically when the Responsible of milestone has changed.</li>
+</ul>
+<div class="compound">
+<p>** Auto set parent activity status**</p>
+</div>
+<ul class="simple">
+<li>Auto set status of parent activity from the status of children activity.</li>
+</ul>
+</div></blockquote>
+<p class="rubric">GENERAL SECTION 3 : Display</p>
+<ul class="simple">
+<li>Selection of graphic interface behavior and generic display parameter for users.</li>
+</ul>
+<p class="rubric">Section: Display
+* transition between screen changes in flash or fade mode.</p>
+<p class="rubric">Max items to display in Today list
+* limit this list. items are generally ordered by issue date increasing</p>
+<p class="rubric">Quick filtering by status
+* Display one button. Allow to filter on lists the element by status checking boxes. Refresh to make appear on boxe a new state just created on list .</p>
+<p class="rubric">Section: Localization</p>
+<p class="rubric">Currency
+* Choose your symbol displayed on each monetary boxe</p>
+<p class="rubric">Currency position for cost display
+* Symbol sets  before or after each monetary boxe</p>
+<p class="rubric">Section: Default values for user parameters</p>
+<p class="rubric">Default language
+* choose among 19 languages / easy come back with translation in target language</p>
+<p class="rubric">Default theme
+* choose among various</p>
+<p class="rubric">Fist page
+* Display your favorite screen like the first one after connexion</p>
+<p class="rubric">Icone size in menu
+* Icon size are default : user can overwrite these values</p>
+<p class="rubric">Display of the upper menu
+* Icones are hidden or no.</p>
+<p class="rubric">Display of the left menu
+* Appears by icones or in wide mode</p>
+<p class="rubric">Display history
+* no
+* yes, yes with work indicated ( on the bottom of the page )
+* on request ( through a specific button )</p>
+<p class="rubric">Editor for rich text
+* Choose</p>
+<p class="rubric">Activate the spell checker in CK editor
+* yes or no</p>
+<p class="rubric">GENERAL SECTION 4 : References</p>
+<p class="rubric">Section: Format for reference numbering</p>
+<ul class="simple">
+<li>Allows to define reference formats for items of element, documents and bills.
+* Prefix : can contain {PROJ} for project code, {TYPE} for type code, {YEAR} for current year and {MONTH} for current month.</li>
+</ul>
+<p class="rubric">Section: Document reference format</p>
+<ul class="simple">
+<li>Format : can contain {PROJ} for project code, {TYPE} for type code, {NUM} for number as computed for reference, and {NAME} for document name.</li>
+<li>Suffix : can contain {VERS} for version name.</li>
+</ul>
+<p class="rubric">Section: Bill reference format</p>
+<p class="rubric">Section: Product and Component</p>
+<p class="rubric">GENERAL SECTION 5 : Configuration</p>
+<p class="rubric">GENERAL SECTION 6 : Mailing</p>
+<p class="rubric">Section: Emailing</p>
+<p>Parameters to allow the application to send emails.</p>
+<p class="rubric">Section: Mail titles</p>
+<ul class="simple">
+<li>Parameters to define title of email depending on event (1).</li>
+</ul>
+<p>(see: <span class="xref std std-ref">administration-special-field-label</span>)</p>
+<p class="rubric" id="administration-special-field-label"><span id="index-15"></span>Section: Automatic emails grouping</p>
+<p>E-mail sending delay: possibility not to send emails in a row, but to delay them to send only one message if several changes generating an emails send are made in a short time.</p>
+<p class="rubric">Section: Test email configuration</p>
+<p class="rubric">GENERAL SECTION 6 : Authentication</p>
+<p class="rubric">Section: Ldap management parameters</p>
+<ul class="simple">
+<li>Information about LDAP connection and behavior on creation of new user from LDAP connection.</li>
+</ul>
+<p class="rubric">Section: User and password</p>
+<ul class="simple">
+<li>Security constraints about users and passwords.</li>
+</ul>
+<p class="rubric">GENERAL SECTION 7 : Automation</p>
+<p class="rubric">Section: Management of automated service (CRON)</p>
+<p>Parameters for the “Cron” process.</p>
+<div class="topic">
+<p class="topic-title first">Defined frequency for these automatic functions</p>
+<ul class="simple">
+<li>It will manage :<ul>
+<li>Alert generation : Frequency for recalculation of indicators values.</li>
+<li>Check alert : Frequency for client side browser to check if alert has to be displayed.</li>
+<li>Import : Automatic import parameters as below.</li>
+</ul>
+</li>
+</ul>
+</div>
+<p class="rubric">Section: Automatic import of files</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Cron working directory</p>
+<p class="last">Should be set out of web reach.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Directory of automated integration files</p>
+<p class="last">Should must be set out of web reach.</p>
+</div>
+<p class="rubric">Section: Automatic import of replies to emails</p>
+<div class="topic">
+<p class="topic-title first">Defined parameters for the “Reply to” process</p>
+<ul class="simple">
+<li>It will manage connection to IMAP INBOX to retrieve email answers.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Email input check cron delay</p>
+<ul class="last simple">
+<li>Delay of -1 deactivates this functionality.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>IMAP host</p>
+<ul class="last simple">
+<li>Must be an IMAP connection string.</li>
+<li>Ex: to connect to GMAIL input box, host must be: {imap.gmail.com:993/imap/ssl}INBOX</li>
+</ul>
+</div>
+</div>
+<p>Project planning is recalculated only for those who need to be. A data or more has been changed into the project so a new calculation is expected.</p>
+<blockquote>
+<div><div class="compound">
+<p><strong>Complete calculation</strong></p>
+</div>
+</div></blockquote>
+<p>All projects planning are recalculated.</p>
+<blockquote>
+<div><div class="compound">
+<p><strong>Define parameters</strong></p>
+</div>
+<ul class="simple">
+<li>Select a schedule, day(s), month  to be done.</li>
+</ul>
+<div class="compound">
+<p class="compound-first"><strong>Activated or desactived this feature</strong></p>
+<ul class="compound-last simple">
+<li>by simple click</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first">** Start date for... **</p>
+<ul class="compound-last simple">
+<li>Select when you want to recalculate project(s)according the date of today&#8217;s date</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Section: Generation of alerts if real work is not entered</p>
+<ul class="simple">
+<li>Specific parameters about alerts.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p><strong>Define parameters</strong></p>
+</div>
+<ul>
+<li><p class="first">Select a schedule, day(s), month  if you want send a reminder.</p>
+<blockquote>
+<div><ul class="simple">
+<li>It is possible to choose as wished.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="compound">
+<p class="compound-first"><strong>Activated or desactived this feature</strong></p>
+<ul class="compound-last simple">
+<li>by simple click</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Control input up to</strong></p>
+<ul class="compound-last simple">
+<li>Select when you want to be controlled, current day, previous day or next days.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Number of days to control</strong></p>
+<ul class="compound-last">
+<li><p class="first">Choose how many days will be controled</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>All days of the week, open or off days are taken into account.</li>
+<li>Off days in real work allocation will not send you an alert.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><a href="#id3"><span class="problematic" id="id4">**</span></a>Select how to send alert to each profil **</p>
+<ul class="compound-last simple">
+<li>Internal alert, email, both or none.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">GENERAL SECTION 8 : System</p>
+<p class="rubric">Section: Files and directories</p>
+<p>Definition of directories and other parameters used for Files management.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Attachments Directory</p>
+<p class="last">Should be set out of web reach.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Temporary directory for reports</p>
+<p class="last">Must be kept in web reach.</p>
+</div>
+<p class="rubric" id="document-section">Section: Document</p>
+<p>Definition of directories and other parameters used for Documents management.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Root directory for documents</p>
+<p class="last">Should be set out of web reach.</p>
+</div>
+<p class="rubric">Section: Localization data</p>
+<ul>
+<li><p class="first"><strong>Charset to save files on server</strong></p>
+<blockquote>
+<div><p>Keep empty for Linux servers, files names will be stored in UTF8. For windows OS server, define charset as &#8220;windows-1252&#8221; (for western europe) or similar corresponding to your localization.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Separator for CSV files (on export and export)</strong></p>
+</li>
+</ul>
+<p class="rubric">Section: Miscellaneous</p>
+<ul class="simple">
+<li>Auto check (or not) for existing new version of the tool (only administrator is informed);</li>
+</ul>
+<p class="rubric">Section: PDF export</p>
+<ul class="simple">
+<li>Memory limit for PDF generation.</li>
+</ul>
+<p class="rubric">Section: SSL connection to database</p>
+<ul>
+<li><p class="first">SSL Key</p>
+</li>
+<li><p class="first">SSL Certification</p>
+</li>
+<li><p class="first">SSL Certificate Authority</p>
+</li>
+<li><p class="first">Enter patch to corresponding files to enable SSL connection to the database.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Take care that these files must exist and be valid SSL files.</p>
+<p class="last">If values are incorrect, the application will not work any more, and you&#8217;ll have to manually fix parameters in the database.</p>
+</div>
+</li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="automated-service">Section: Management of automated service (CRON)</p>
+<p class="rubric" id="automatic-import">Automatic import</p>
+<div class="topic">
+<p class="topic-title first">Field: Automatic import cron delay</p>
+<ul class="simple">
+<li></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Directory of automated integration files</p>
+<ul class="simple">
+<li></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Log destination</p>
+<ul class="simple">
+<li></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Mailing list for logs</p>
+<ul class="simple">
+<li></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="special-fields">
+<h2>Special fields<a class="headerlink" href="#special-fields" title="Permalink to this headline">¶</a></h2>
+<p>Special fields can be used in the title and body mail to be replaced by item values :</p>
+<ul class="simple">
+<li>${dbName} : the display name of the instance</li>
+<li>${id} : id of the item</li>
+<li>${item} : the class of the item (for instance &#8220;Ticket&#8221;)</li>
+<li>${name} : name of the item</li>
+<li>${status} : the current status of the item</li>
+<li>${project} : the name of the project of the item</li>
+<li>${type} : the type of the item</li>
+<li>${reference} : the reference of the item</li>
+<li>${externalReference} : the <a class="reference internal" href="Glossary.html#term-external-reference"><span class="xref std std-term">external reference</span></a> of the item</li>
+<li>${issuer} : the name of the issuer of the item</li>
+<li>${responsible}  : the name of the responsible for the item</li>
+<li>${sender} : the name of the sender of email</li>
+<li>${sponsor} : the name of the project sponsor</li>
+<li>${projectCode} : the project code</li>
+<li>${contractCode} : the contact code of project</li>
+<li>${customer} : Customer of project</li>
+<li>${url} : the URL for direct access to the item</li>
+<li>${login} the user name</li>
+<li>${password} the user password</li>
+<li>${adminMail} the email of administrator</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Administration console</a></li>
+<li><a class="reference internal" href="#audit-connections">Audit connections</a></li>
+<li><a class="reference internal" href="#global-parameters">Global parameters</a><ul>
+<li><a class="reference internal" href="#special-fields">Special fields</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Organization.html"
+                        title="previous chapter">Organizations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ActivityStream.html"
+                        title="next chapter">Activity Stream</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ActivityStream.html" title="Activity Stream"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Organization.html" title="Organizations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 7.1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2018, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>
