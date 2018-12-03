@@ -40,14 +40,15 @@
 .ProjeQtOrFlatBlue html, .ProjeQtOrFlatBlue body, .ProjeQtOrFlatBlue #leftDiv, .ProjeQtOrFlatBlue #logoDiv,
 .ProjeQtOrFlatBlue .dijitSplitterH, .ProjeQtOrFlatBlue .dijitGutterH, .ProjeQtOrFlatBlue .dijitSplitterV, .ProjeQtOrFlatBlue .dijitGutterV,
 .ProjeQtOrFlatBlue .loginBackground {
-  background-color: #545281; 
+  background-color: #1b5415;
+   /*background-color: #64a85c;*/
   /* background-color: #d4d5da; */
 }
 
 .ProjeQtOrFlatBlue .dijitMenuItemHover,
 .ProjeQtOrFlatBlue .dijitMenuPassive .dijitMenuItemHover,
 .ProjeQtOrFlatBlue .dijitMenuItemSelected  {
-  background-color: #545281;  color: #EEEEEE; 
+  background-color: #1b5415;  color: #ba9b35; 
   /* background-color: #d4d5da; color: #545281; */  
   
 }
@@ -62,56 +63,56 @@
 	border-bottom-color: #fafafa;
 }
 .ProjeQtOrFlatBlue #toolBarDiv, .ProjeQtOrFlatBlue #statusBarDiv, .ProjeQtOrFlatBlue .statusBar { /**toolbar**/
-   color: #EEEEEE;
-   background: #545281 !important;
+   color: #ba9b35;
+   background: #1b5415 !important;
 }
 .ProjeQtOrFlatBlue .tabLabel, .ProjeQtOrFlatBlue .label {
-  background-color:  #fafafa; color: #545281;
+  background-color:  #fafafa; color: #1b5415;
 }
 .ProjeQtOrFlatBlue .dojoxGridRowOver .dojoxGridCell {
  background: #aca0bc !important;
- color: #545281 !important;
+ color: #1b5415 !important;
  -moz-opacity: 0.7;
  opacity: 0.7;
  filter: Alpha(Opacity = 70);
 }
 
 .ProjeQtOrFlatBlue #buttonDiv { /**toolbar**/
-  background-color: #545281;  color: #FFFFFF;  
+  background-color: #1b5415;  color: #e2e2e2;  
 }
 
 .ProjeQtOrFlatBlue .title {
   font-weight: 600;
-  color: #FFFFFF;
+  color: #e2e2e2;
   text-shadow: none;
 }
 .ProjeQtOrFlatBlue .listTitle {
-  /* background-color: #545281;  color: #EEEEEE; */  
-  background-color: #545281;  
-  color: #FFFFFF;
+  /* background-color: #545281;  color: #ba9b35; */  
+  background-color: #1b5415;  
+  color: #e2e2e2;
 }
 .ProjeQtOrFlatBlue .dojoxGridRowSelected { /**selected lines**/
-  background-color: #545281;  color: #EEEEEE; 
+  background-color: #1b5415;  color: #ba9b35; 
 }
 .ProjeQtOrFlatBlue .display, .ProjeQtOrFlatBlue #printPreview {
   border: 1px solid #fafafa;
 }
 
 .ProjeQtOrFlatBlue .titleProject {
- color: #EEEEEE;
+ color: #ba9b35;
  text-shadow: none;
    
 }
 
 .ProjeQtOrFlatBlue #logoDiv {
-  background: #545281 !important;
+  background: #1b5415 !important;
 
 }
 
 .ProjeQtOrFlatBlue .listTitle,
 .ProjeQtOrFlatBlue .dijitTitlePane .dijitTitlePaneTitle,
 .ProjeQtOrFlatBlue .dojoxGridRowSelected, .ProjeQtOrFlatBlue #buttonDiv  {
-  background:#545281 !important;
+  background:#1b5415 !important;
 }
 .ProjeQtOrFlatBlue .dijitTitlePane .dijitTitlePaneTitle, .ProjeQtOrFlatBlue .section {
   color: #FEFEFE !important;
@@ -173,7 +174,7 @@
 .ProjeQtOrFlatBlue .pseudoButton {
   text-shadow: none;
   border-radius : 0px;
-  color: #545281;
+  color: #1b5415;
   font-weight: bold;
   background: rgba(255,255,255,0.5);
 }
@@ -189,12 +190,12 @@
   
 }
 :focus {
-  outline: #ffffff;
+  outline: #e2e2e2;
 }
 .ProjeQtOrFlatBlue .menuBarItemCaption {
   text-shadow: none;
   border-radius : 0px;
-  color: #545281;
+  color: #1b5415;
   font-weight: 600;
 }
 .ProjeQtOrFlatBlue .menuBarItem {
@@ -209,7 +210,7 @@
 /* BEGIN - ADD BY TABARY - NOTIFICATION SYSTEM */
 
 .ProjeQtOrFlatBlue .dijitSplitter {
-  background: #545281;
+  background: #1b5415;
 } 
 .ProjeQtOrFlatBlue .dijitSplitterH {
   border-bottom: 1px solid #cdcadb;
@@ -223,7 +224,7 @@
     background: none repeat scroll 0 0 #a6a0bc !important;
     border: 1px solid #ccc;
     border-right: 1px solid #fefefe;
-    color: #ffffff !important;
+    color: #e2e2e2 !important;
     text-shadow: none;  
     font-size:120%;
     padding-top:0px;
@@ -235,16 +236,16 @@
 }
 .ProjeQtOrFlatBlue .messageHeader {
   background: url() #a6a0bc !important;
-  color: #ffffff !important;
+  color: #e2e2e2 !important;
   text-shadow: none !important;
-  border-right:  #ffffff solid 1px;
+  border-right:  #e2e2e2 solid 1px;
 }
 .ProjeQtOrFlatBlue .messageData {
-  color: #545281;
+  color: #1b5415;
 }
 .ProjeQtOrFlatBlue .dijitAccordionTitle, .ProjeQtOrFlatBlue .reportTableColumnHeader, .ProjeQtOrFlatBlue .largeReportHeader  {
   background: url() #a6a0bc !important;
-  color: #ffffff !important;
+  color: #e2e2e2 !important;
   text-shadow: none !important;
   border-top: 0px solid #a6a0bc;
   border-bottom: 1px solid #7b769c ;
@@ -252,7 +253,7 @@
 
 .ProjeQtOrFlatBlue .dijitAccordionTitle2, .ProjeQtOrFlatBlue .reportTableColumnHeader2, .ProjeQtOrFlatBlue .largeReportHeader2   {
   background: url() #cdcadb !important;
-  color: #ffffff !important;
+  color: #e2e2e2 !important;
   text-shadow: none !important;
   border-top: 0px solid #a6a0bc;
   border-bottom: 1px solid #7b769c ;
@@ -289,24 +290,24 @@
   border-radius:0px;
 }
 .ProjeQtOrFlatBlue .dijitTreeRow {
-  color: #545281;
+  color: #1b5415;
 }
 .ProjeQtOrFlatBlue .dijitTreeRow2 {
-  color: #545281;
+  color: #1b5415;
 }
 .ProjeQtOrFlatBlue .dijitTreeRow3 {
-  color: #545281;
+  color: #1b5415;
 }
 .ProjeQtOrFlatBlue .dijitTreeRow:hover {
   background-image: url();
   background: #cdcadb;
-  color: #545281;
+  color: #1b5415;
 }
 
 .ProjeQtOrFlatBlue .dijitTreeRow2:hover {
 	background-image: url();
   background: #a6a0bc;
-  color: #ffffff;
+  color: #e2e2e2;
 }
 
 .ProjeQtOrFlatBlue .dijitTreeRowSelected .dijitTreeLabel {  
@@ -374,7 +375,7 @@
     transition: all 0.5s ease;
 }
 .ProjeQtOrFlatBlue .dijitButtonNode:hover, .ProjeQtOrFlatBlue .dijitReset.dijitInline.dijitButtonNode:hover {
-  background: #ffffff;
+  background: #e2e2e2;
 }
 .ProjeQtOrFlatBlue .dijitButtonDisabled .dijitButtonNode, .ProjeQtOrFlatBlue .dijitButtonDisabled .dijitReset.dijitInline.dijitButtonNode { 
   background: rgba(128,128,128,0.2) !important;
@@ -416,13 +417,13 @@ body .ProjeQtOrFlatBlue {
 }
 .ProjeQtOrFlatBlue .roundedVisibleButton.roundedButton.generalColClass:hover {
   transform: none;
-  background: url() #ffffff ;
+  background: url() #e2e2e2 ;
 }
 
 .ProjeQtOrFlatBlue .dijitDialogTitleBar {
   background-image: url();
   background: url() #7b769c !important;
-  color: #ffffff;
+  color: #e2e2e2;
   text-shadow: none;
 }
 
@@ -1477,7 +1478,7 @@ body .ProjeQtOrFlatBlue {
 .ProjeQtOrFlatRed .dijitMenuItemHover,
 .ProjeQtOrFlatRed .dijitMenuPassive .dijitMenuItemHover,
 .ProjeQtOrFlatRed .dijitMenuItemSelected  {
-  background-color: #833e3e;  color: #EEEEEE; 
+  background-color: #833e3e;  color: #ba9b35; 
   /* background-color: #d4d5da; color: #833e3e; */  
   
 }
@@ -1507,7 +1508,7 @@ body .ProjeQtOrFlatBlue {
 }
 
 .ProjeQtOrFlatRed #buttonDiv { /**toolbar**/
-  background-color: #833e3e;  color: #FFFFFF;  
+  background-color: #833e3e;  color: #e2e2e2;  
 }
 
 .ProjeQtOrFlatRed .title {

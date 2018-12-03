@@ -1054,7 +1054,8 @@ class ImputationLine {
     echo '  <TD class="ganttLeftTopLine" style="width:'.$iconWidth.'px;"></TD>';
     echo '  <TD class="ganttLeftTopLine" style="width:'.$iconWidth.'px;"></TD>';
     echo '  <TD class="ganttLeftTopLine" colspan="'.(($lowRes)?$lowRes:'5').'" style="text-align: left; '.'border-left:0px;" nowrap><span class="nobr">';
-    echo Work::displayImputationUnit();
+    //echo Work::displayImputationUnit();
+    echo "Billable Work";
     echo '</span></TD>';
     
     $curDate=$startDate;
@@ -1117,6 +1118,80 @@ class ImputationLine {
     
     echo '</TR>';
     echo '</table>';
+    
+    //===================================================Changes for SSDI====================
+    
+    echo '<table class="imputationTable" style="width:100%">';
+    echo '<TR class="ganttDetail" >';
+    echo '  <TD class="ganttLeftTopLine" style="width:'.$iconWidth.'px;"></TD>';
+    echo '  <TD class="ganttLeftTopLine" style="width:'.$iconWidth.'px;"></TD>';
+    echo '  <TD class="ganttLeftTopLine" colspan="'.(($lowRes)?$lowRes:'5').'" style="text-align: left; '.'border-left:0px;" nowrap><span class="nobr">';
+    echo "Non-Billable Hours";
+    echo '</span></TD>';
+    
+    $curDate=$startDate;
+    $nbFutureDays=Parameter::getGlobalParameter('maxDaysToBookWork');
+    if ($nbFutureDays==null||$nbFutureDays=='') $nbFutureDays=-1;
+    $nbFutureDaysBlocking=Parameter::getGlobalParameter('maxDaysToBookWorkBlocking');
+    if ($nbFutureDaysBlocking==null||$nbFutureDaysBlocking=='') $nbFutureDaysBlocking=-1;
+    $maxDateFuture=date('Y-m-d', strtotime("+".$nbFutureDays." days"));
+    $maxDateFutureBlocking=date('Y-m-d', strtotime("+".$nbFutureDaysBlocking." days"));
+    if (!$print) echo '<input type="hidden" id="nbFutureDays" value="'.$nbFutureDays.'" />';
+    if (!$print) echo '<input type="hidden" id="nbFutureDaysBlocking" value="'.$nbFutureDaysBlocking.'" />';
+    if (!$print) echo '<input type="hidden" value="'.$maxDateFuture.'" />';
+    if (!$print) echo '<input type="hidden" id="businessDay" value="'.($businessDay).'" />';
+    $totalWork=0;
+    for ($i=1; $i<=$nbDays; $i++) {
+        echo '  <TD class="ganttLeftTitle" style="width: '.$inputWidth.'px;';
+        if ($today==$curDate) {
+            // echo ' background-color:#' . $currentdayColor . ';';
+        }
+        echo '"><span class="nobr">';
+        if (!$print) {
+            echo '<div type="text" dojoType="dijit.form.NumberTextBox" ';
+            // echo ' constraints="{pattern:\'###0.0#\'}"';
+            echo ' trim="true" disabled="true" ';
+            if (round($colSum[$i], 2)>$capacity) {
+                echo ' class="imputationInvalidCapacity imputation"';
+            } else if (round($colSum[$i], 2)<$capacity) {
+                echo ' class="displayTransparent imputation"';
+            } else {
+                echo ' class="imputationValidCapacity imputation"';
+            }
+            echo '  style="width: 45px; text-align: center; color: #000000 !important;" ';
+            echo ' id="colSumWork_'.$i.'"';
+            echo ' value="'.$colSum[$i].'" ';
+            echo ' >';
+            echo '</div>';
+            echo '<input type="hidden" id="colIsFuture_'.$i.'" value="'.(($curDate>$maxDateFuture&&$nbFutureDays!=-1)?1:0).'" />';
+            echo '<input type="hidden" id="colIsFutureBlocking_'.$i.'" value="'.(($curDate>$maxDateFutureBlocking&&$nbFutureDaysBlocking!=-1)?1:0).'" />';
+        } else {
+            echo $colSum[$i];
+        }
+        $totalWork+=$colSum[$i];
+        echo '</span></TD>';
+        $curDate=date('Y-m-d', strtotime("+1 days", strtotime($curDate)));
+    }
+    $classTotalWork="imputationValidCapacity";
+    if (round($totalWork, 2)>$businessDay) {
+        $classTotalWork='imputationInvalidCapacity';
+    } else if (round($totalWork, 2)<$businessDay) {
+        $classTotalWork='displayTransparent';
+    }
+    $colSpanFooter=''; // No more need
+    $inputWidthFooter=$inputWidth;
+    if (!$print and count($tab)>20) {
+        $colSpanFooter='';
+        $inputWidthFooter=2*$inputWidth;
+    }
+    
+    echo '  <TD '.$colSpanFooter.' class="ganttLeftTitle" style="width: 132px;"'.(($print)?' colspan="2"':'').' ><span class="nobr" ><div id="totalWork" type="text" trim="true" disabled="true" dojoType="dijit.form.NumberTextBox" style="font-weight:bold;width: 95%; text-align: center; color: #000000 !important;" class="'.$classTotalWork.' imputation" value="'.$totalWork.'"></div></span></TD>';
+    
+    echo '</TR>';
+    echo '</table>';
+    
+    //===========================================Changes end ====================================================
+    
     if (!$print) {
       echo '</div>';
     }
